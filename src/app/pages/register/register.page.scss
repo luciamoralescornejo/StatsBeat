@@ -1,0 +1,194 @@
+/* Fondo general */
+ion-content {
+  --background: #121212;
+
+  display: flex;
+  justify-content: center;
+  padding: 60px;
+}
+
+/* Contenedor del logo */
+.contenedor-logo {
+  text-align: center;
+  margin-bottom: 20px;
+
+  .logo-imagen {
+    width: 150px;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .logo-texto {
+    font-size: 32px;
+    color: #1fd660;
+    margin-top: 12px;
+    font-weight: bold;
+  }
+}
+
+/* Contenedor de la tarjeta (versión escritorio) */
+.contenedor-registro {
+  margin-top: auto;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;           /* Más ancho para portátiles */
+  max-width: 5000px;     /* Limite visual */
+  min-width: 800px;     /* Evita que sea demasiado estrecho */
+  align-items: center;
+
+  background: #212121;
+  border-radius: 20px;
+
+  padding: 40px 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  box-shadow: 25px rgba(0, 0, 0, 0.35);
+}
+
+/* Título */
+.titulo-registro {
+  text-align: center;
+  color: #1fd660;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Subtexto */
+.subtexto {
+  text-align: center;
+  color: #1fd660;
+  font-size: 16px;
+  margin-bottom: 30px;
+  max-width: 400px;
+}
+
+/* Inputs (más grandes y anchos) */
+ion-input {
+  --background: #474747;
+  --color: white;
+  --placeholder-color: #cfcfcf;
+  --padding-start: 18px;
+
+  --border-radius: 30px;   /* border-radius grande */
+  width: 100%;
+  height: 55px;
+  margin-bottom: 18px;
+  font-size: 16px;
+}
+
+.rol-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.rol-container ion-item {
+  --background: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  --inner-padding-end: 0px;
+  display: flex;
+  align-items: center;
+  margin: 12px;
+}
+
+.rol-container ion-label {
+  font-size: 16px;
+  color: #cfcfcf;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.rol-container .rol-texto-activo {
+  color: #1fd660;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+ion-toggle {
+  --handle-background: #ffffff;
+  --handle-background-checked: #1fd660;
+  --background: #666666;
+  --background-checked: #333333;
+  --border-radius: 999px;
+  width: 50px;
+  height: 28px;
+  margin: 20px;
+}
+
+@media (max-width: 768px) {
+  .rol-container {
+    gap: 20px;
+  }
+  .rol-container ion-label {
+    font-size: 14px;
+  }
+  .rol-container .rol-texto-activo {
+    font-size: 16px;
+  }
+  ion-toggle {
+    width: 45px;
+    height: 25px;
+  }
+}
+
+/* Botón grande estilo escritorio */
+.boton-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.boton-registrar {
+  width: 100%;
+  height: 55px;
+  
+  background-color: #1fd660;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+
+  border-radius: 30px;
+  border: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    filter: brightness(1.15);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+/* 🌐 RESPONSIVE PARA QUE TAMBIÉN FUNCIONE EN MÓVIL */
+@media (max-width: 768px) {
+  .contenedor-registro {
+    width: 90%;
+    padding: 25px 20px;
+    min-width: unset;
+  }
+
+  .boton-registrar {
+    width: 85%;
+  }
+
+  ion-input {
+    height: 50px;
+  }
+}
