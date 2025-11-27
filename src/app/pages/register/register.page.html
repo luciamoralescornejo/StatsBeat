@@ -2,15 +2,15 @@
 
   <!-- CONTENEDOR DEL LOGO -->
   <div class="contenedor-logo">
-    <img src="assets/img/Ojos.png" class="logo-imagen" />
-    <h1 class="logo-texto">StatsBeat</h1>
+    <img src="assets/img/Ojos.png" class="ojos-imagen" />
+    <h1 class="logo-texto">(Nombre de la app en proceso :/)</h1>
   </div>
 
-  <!-- TARJETA (contenedor-registro en SCSS) -->
+  <!-- TARJETA -->
   <div class="contenedor-registro">
 
     <h2 class="titulo-registro">REGISTRO</h2>
-    <p class="subtexto">¿Aún no tienes cuenta de StatsBeat? ¡Regístrate!</p>
+    <p class="subtexto">¿Aún no tienes cuenta de (Nombre de la app en proceso :/)? ¡Regístrate!</p>
 
     <!-- FORMULARIO -->
     <form (ngSubmit)="registrar()">
@@ -33,14 +33,16 @@
       <!-- Contenedor de los roles -->
       <div class="rol-container">
 
-        <ion-item lines="none">
-          <ion-label [class.rol-texto-activo]="formulario.rol === 'artista'">Artista</ion-label>
-          <ion-toggle [checked]="formulario.rol === 'artista'" (ionChange)="toggleRol('artista')"></ion-toggle>
+        <ion-item lines="none" class="rol-item">
+          <ion-label>Artista</ion-label>
+          <ion-toggle [checked]="formulario.rol === 'artista'" (ionChange)="toggleRol('artista')">
+          </ion-toggle>
         </ion-item>
 
-        <ion-item lines="none">
-          <ion-label [class.rol-texto-activo]="formulario.rol === 'oyente'">Oyente</ion-label>
-          <ion-toggle [checked]="formulario.rol === 'oyente'" (ionChange)="toggleRol('oyente')"></ion-toggle>
+        <ion-item lines="none" class="rol-item">
+          <ion-label>Oyente</ion-label>
+          <ion-toggle [checked]="formulario.rol === 'oyente'" (ionChange)="toggleRol('oyente')">
+          </ion-toggle>
         </ion-item>
 
       </div>

@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './register.page.html',
   styleUrls: ['./register.page.scss'],
   standalone: true,
-  imports: [IonicModule, FormsModule] // ← IMPORTANTE
+  imports: [IonicModule, FormsModule] 
 })
 export class RegisterPage {
 
@@ -15,8 +15,8 @@ export class RegisterPage {
   formulario = {
     nombre: '',
     correo: '',
-    contrasena: '',              // SIN Ñ
-    confirmarContrasena: '',     // SIN Ñ
+    contrasena: '',
+    confirmarContrasena: '',
     rol: 'oyente' //por defecto será artista
   };
 
@@ -41,6 +41,6 @@ export class RegisterPage {
       return;
     }
 
-    // Aquí enviarías los datos al backend
+    // Aquí van a ir los datos al backend
   }
 }
