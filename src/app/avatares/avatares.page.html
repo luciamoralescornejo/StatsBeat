@@ -1,0 +1,38 @@
+<ion-content [fullscreen]="true">
+
+  <!-- CONTENEDOR DEL LOGO -->
+  <div class="contenedor-logo">
+    <img src="assets/img/Ojos.png" class="ojos-imagen" />
+    <h1 class="logo-texto">(Nombre de la app en proceso :/)</h1>
+  </div>
+
+  <!-- TARJETA PRINCIPAL -->
+  <div class="contenedor-avatar">
+
+    <h2 class="titulo-avatar">AVATARES</h2>
+    <p class="subtexto">Escoge uno de nuestros avatares para la foto de perfil</p>
+
+    <form (ngSubmit)="avatar()">
+      <!-- CONTENEDOR DEL AVATAR Y FLECHAS -->
+      <div class="avatar-selector">
+
+        <!-- Flecha izquierda -->
+        <div class="flecha flecha-izq" (click)="anteriorAvatar()"> ◀ </div>
+
+        <!-- Avatar dentro del círculo -->
+        <div class="avatar-circulo">
+          <img [src]="avatars[avatarIndex]" class="imagen-avatar">
+        </div>
+
+        <!-- Flecha derecha -->
+        <div class="flecha flecha-der" (click)="siguienteAvatar()"> ▶ </div>
+
+      </div>
+
+      <!-- Botón -->
+      <button class="boton-avatar" (click)="avatar()"> SELECCIONAR </button>
+    </form>
+
+  </div>
+
+</ion-content>

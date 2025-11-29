@@ -33,7 +33,7 @@ ion-content {
 /* TARJETA PRINCIPAL (FORMULARIO) */
 .contenedor-registro {
   //centra todo en la pantalla dejando espacio abajo 
-  margin-top: auto; 
+  margin-top: auto;
   margin-bottom: 50px;
   margin-left: auto;
   margin-right: auto;
@@ -136,7 +136,7 @@ ion-toggle {
 }
 
 //edita el botón
-.boton-registrar {
+.boton-siguiente {
   width: 100%; //el ancho ocupa el 100% de su espacio
   height: 55px; //altura
 
@@ -158,13 +158,13 @@ ion-toggle {
 }
 
 //cuando pasas el raton por encima del boton
-.boton-registrar:hover {
+.boton-siguiente:hover {
   filter: brightness(1.15); //aumenta el brillo del boón un 15%
   transform: translateY(-2px); //da sensación de que el botón sube
 }
 
 //cuando se presiona el botón
-.boton-registrar:active {
+.boton-siguiente:active {
   transform: translateY(0); //cuando le ponemos el cursor por encima se sube y con esto vuelve a su sitio
 }
 
@@ -176,7 +176,7 @@ ion-toggle {
     min-width: unset; //eliminamos el mínimo ancho que teníamos para escritorio
   }
 
-  .boton-registrar {
+  .boton-siguiente {
     width: 85%; //el botón ocupa menos ancho que en escritorio para no pegarse a los bordes
   }
 

@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './register.page.html',
   styleUrls: ['./register.page.scss'],
   standalone: true,
-  imports: [IonicModule, FormsModule] 
+  imports: [IonicModule, FormsModule]
 })
 export class RegisterPage {
 

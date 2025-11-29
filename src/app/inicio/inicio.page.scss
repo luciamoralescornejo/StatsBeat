@@ -1,0 +1,168 @@
+/* usamos ion-... delante de los componentes porque usamos Ionic,por lo que los componentes son 
+   encapsulados por eso usamos -- delante de las variables que cambian el estilo del componente */
+
+/* FONDO GENERAL */
+ion-content {
+    --background: #121212; //color del fondo
+    display: flex; //para que se acomoden los elementos dependiendo del tamaño de la ventana
+    justify-content: center; //centra todo lo que está dentro 
+    padding: 60px; //espacio de alrededor del contenido
+}
+
+/* CONTENEDOR DEL LOGO */
+.contenedor-logo {
+    text-align: center; //centrado
+    margin-bottom: 20px;
+}
+
+//para la imagen de los ojos
+.contenedor-logo .ojos-imagen {
+    width: 150px; //ancho de la imagen 
+    height: auto; //altura
+    margin-top: 20px; //margen de arriba 
+}
+
+//para el nombre de la app bajo los ojos 
+.contenedor-logo .logo-texto {
+    font-size: 32px; //tamaño de la letra
+    color: #1fd660; //color
+    margin-top: 12px; //margen de arriba para separarlo de los ojos
+    font-weight: bold; //negrita
+}
+
+/* TARJETA PRINCIPAL (FORMULARIO) */
+.contenedor-inicio {
+    //centra todo en la pantalla dejando espacio abajo 
+    margin-top: auto;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 60%; //la tarjeta ocupa el 60% de la pantalla de ancho 
+    max-width: 5000px; //máximo de tamaño
+    min-width: 800px; //mínimo de tamaño
+
+    background: #212121; //color de la tarjeta
+    border-radius: 20px; //el radio de los bordes redondeados
+
+    padding: 40px 35px; //espacio alrededor del contenido
+
+    //todos los elementos van uno debajo del otro y centrado horizontalmente
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    //sombra alrededor de la tarjeta
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* TITULO */
+.titulo-inicio {
+    text-align: center; //centrado
+    color: #1fd660; //color
+    font-size: 32px; //tamaño
+    font-weight: bold; //negrita
+    margin-bottom: 10px; //margen de abajo
+}
+
+/* SUBTEXTO */
+.subtexto {
+    text-align: center; //centrado
+    color: #1fd660; //color
+    font-size: 16px; //tamaño
+    margin-bottom: 30px; //margen de abajo
+    max-width: 400px; //tamaño máximo
+}
+
+.olvido {
+    text-align: left; //centrado
+    color: white; //color
+    font-size: 10px; //tamaño
+    margin-bottom: 30px; //margen de abajo
+    max-width: 400px; //tamaño máximo
+}
+
+/* INPUTS (BLOQUES DE TEXTO) */
+ion-input {
+    --background: #474747; //fondo
+    --color: white; //color de la letra
+    --placeholder-color: #cfcfcf; //color del texto que aparece dentro del input antes de escribir
+    --padding-start: 18px; //espacio antes del texto para que no aparezca justo al principio del input
+
+    --border-radius: 30px; //radio del borde del input 
+    width: 100%; //ocupa todo el espacio disponible en horizontal 
+    height: 55px; //altura del input
+    margin-bottom: 18px; //espacio debajo de input
+    font-size: 16px; //tamaño de la letra
+}
+
+/* BOTÓN */
+//edita el div del botón
+.boton-container {
+    width: 100%; //el ancho ocupa el 100% de su espacio
+    display: flex; //para que se acomoden los elementos dependiendo del tamaño de la ventana
+    justify-content: center; //centra el contenido
+}
+
+//edita el botón
+.boton-iniciar,
+.boton-registrar {
+    width: 100%; //el ancho ocupa el 100% de su espacio
+    height: 55px; //altura
+
+    background-color: #1fd660; //color de fondo
+    color: black; //color de la letra
+    font-weight: bold; //negrita
+    font-size: 18px; //tamaño de la letra
+
+    border-radius: 30px; //radio de los borden
+    border: none; //sin borde
+
+    display: flex; //para que se acomoden los elementos dependiendo del tamaño de la ventana
+    justify-content: center; //centrado horizontal
+    align-items: center; //centrar verticalmente los elementos
+
+    margin-top: 10px; //espacio por encima 
+    cursor: pointer; //el cursor encima del botón cambia a una mano
+    transition: 0.3s; //los cambios se hacen en ese tiempo
+}
+
+.boton-registrar {
+    margin-left: 20px;
+}
+
+//cuando pasas el raton por encima del boton
+.boton-iniciar:hover,
+.boton-registrar:hover {
+    filter: brightness(1.15); //aumenta el brillo del boón un 15%
+    transform: translateY(-2px); //da sensación de que el botón sube
+}
+
+//cuando se presiona el botón
+.boton-iniciar:active,
+.boton-registrar:active {
+    transform: translateY(0); //cuando le ponemos el cursor por encima se sube y con esto vuelve a su sitio
+}
+
+/* PARTE RESPONSIVA PARA MÓVIL */
+@media (max-width: 768px) {
+    .contenedor-inicio {
+        width: 90%; //la tarjeta ocupa casi todo el ancho de la pantalla
+        padding: 25px 20px; //espacio interno reducido para pantallas pequeñas
+        min-width: unset; //eliminamos el mínimo ancho que teníamos para escritorio
+    }
+
+    .boton-iniciar,
+    .boton-registrar {
+        width: 85%; //el botón ocupa menos ancho que en escritorio para no pegarse a los bordes
+    }
+
+    ion-input {
+        height: 50px; //input un poco más bajo para ajustarse a móviles
+    }
+
+    ion-toggle {
+        width: 45px; //toggle más pequeño para pantallas pequeñas
+        height: 25px; //alto reducido para que se ajuste al diseño
+    }
+}

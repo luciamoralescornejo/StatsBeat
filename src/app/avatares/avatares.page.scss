@@ -1,0 +1,151 @@
+/* FONDO GENERAL */
+ion-content {
+    --background: #121212;
+    display: flex;
+    justify-content: center;
+    padding: 60px;
+}
+
+/* CONTENEDOR DEL LOGO */
+.contenedor-logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.ojos-imagen {
+    width: 150px;
+    margin-top: 20px;
+}
+
+.logo-texto {
+    font-size: 32px;
+    color: #1fd660;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+/* TARJETA PRINCIPAL */
+.contenedor-avatar {
+    margin-top: auto;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 60%;
+    min-width: 800px;
+
+    background: #212121;
+    border-radius: 20px;
+
+    padding: 40px 35px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* TITULO */
+.titulo-avatar {
+    color: #1fd660;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* SUBTEXTO */
+.subtexto {
+    text-align: center;
+    color: #1fd660;
+    font-size: 16px;
+    margin-bottom: 30px;
+    max-width: 400px;
+}
+
+/* SELECTOR DE AVATAR */
+.avatar-selector {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* FLECHAS */
+.flecha {
+    font-size: 55px;
+    font-weight: bold;
+    color: #1fd660;
+    cursor: pointer;
+    user-select: none;
+    padding: 15px;
+}
+
+.flecha:hover {
+    transform: scale(1.1);
+}
+
+/* CÍRCULO CON BRILLO */
+.avatar-circulo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 8px solid #1fd660;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+    background-color: #1fd660;
+
+    box-shadow: 0 0 35px rgba(31, 214, 96, 0.6);
+}
+
+.imagen-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* BOTÓN */
+//edita el div del botón
+.boton-container {
+    width: 100%; //el ancho ocupa el 100% de su espacio
+    display: flex; //para que se acomoden los elementos dependiendo del tamaño de la ventana
+    justify-content: center; //centra el contenido
+}
+
+//edita el botón
+.boton-avatar {
+    width: 100%; //el ancho ocupa el 100% de su espacio
+    height: 55px; //altura
+
+    background-color: #1fd660; //color de fondo
+    color: black; //color de la letra
+    font-weight: bold; //negrita
+    font-size: 18px; //tamaño de la letra
+
+    border-radius: 30px; //radio de los borden
+    border: none; //sin borde
+
+    display: flex; //para que se acomoden los elementos dependiendo del tamaño de la ventana
+    justify-content: center; //centrado horizontal
+    align-items: center; //centrar verticalmente los elementos
+
+    margin-top: 10px; //espacio por encima 
+    cursor: pointer; //el cursor encima del botón cambia a una mano
+    transition: 0.3s; //los cambios se hacen en ese tiempo
+}
+
+//cuando pasas el raton por encima del boton
+.boton-avatar:hover {
+    filter: brightness(1.15); //aumenta el brillo del boón un 15%
+    transform: translateY(-2px); //da sensación de que el botón sube
+}
+
+//cuando se presiona el botón
+.boton-avatar:active {
+    transform: translateY(0); //cuando le ponemos el cursor por encima se sube y con esto vuelve a su sitio
+}
